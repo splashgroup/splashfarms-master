@@ -1,0 +1,26 @@
+# /etc/conf.d/splashfarmsd: config file for /etc/init.d/splashfarmsd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/splashfarms/splashfarms.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/splashfarmsd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/splashfarmsd.pid"
+
+# Where to write splashfarmsd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/splashfarmsd"
+
+# User and group to own splashfarmsd process
+#BITCOIND_USER="splashfarms"
+#BITCOIND_GROUP="splashfarms"
+
+# Path to splashfarmsd executable
+#BITCOIND_BIN="/usr/bin/splashfarmsd"
+
+# Nice value to run splashfarmsd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

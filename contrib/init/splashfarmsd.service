@@ -1,0 +1,26 @@
+[Unit]
+Description=SPLASHFARMS's distributed currency daemon
+After=network.target
+
+[Service]
+User=splashfarms
+Group=splashfarms
+
+Type=forking
+PIDFile=/var/lib/splashfarmsd/splashfarmsd.pid
+
+ExecStart=/usr/bin/splashfarmsd -daemon -pid=/var/lib/splashfarmsd/splashfarmsd.pid \
+          -conf=/etc/splashfarms/splashfarms.conf -datadir=/var/lib/splashfarmsd
+
+ExecStop=-/usr/bin/splashfarms-cli -conf=/etc/splashfarms/splashfarms.conf \
+         -datadir=/var/lib/splashfarmsd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

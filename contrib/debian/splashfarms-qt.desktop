@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=SPLASHFARMS
+Comment=SPLASHFARMS P2P Cryptocurrency
+Comment[fr]=SPLASHFARMS, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=SPLASHFARMS, eşten eşe kriptografik sanal para birimi
+Exec=splashfarms-qt %u
+Terminal=false
+Type=Application
+Icon=splashfarms128
+MimeType=x-scheme-handler/splashfarms;
+Categories=Office;Finance;
